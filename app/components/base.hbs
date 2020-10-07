@@ -1,0 +1,19 @@
+<div>
+    <h1 tabindex=1>Universal Cost Splitter</h1>
+    <div class="person">
+    <input add-person-input
+        id="name"
+        value={{currentValue}}
+        type="string"
+        oninput={{action changeValueName}}
+        aria-label="Add Person"
+        tabindex=1
+    >
+    <br>
+    <button add-person-button class="add" onclick={{action addPerson}} tabindex=1>Add Person</button>
+    <button clear-person-button class="clear" onclick={{action clearArray}} tabindex=1>Clear Array</button>
+    </div>
+
+    <Calculator @listOfPeople={{listOfPeople}}/>
+    <Result @listOfPeople={{listOfPeople}}/>
+</div>
