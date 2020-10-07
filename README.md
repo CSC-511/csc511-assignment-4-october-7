@@ -1,7 +1,8 @@
 # csc511-assignment-4-october-7
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a Cost Breakdown Calculator, a user will add names to a list as well as their contributions to an overall total. The app will take in these inputs and output what each person owes or is owed dynamically.  This App has been updated with ARIA for screenreader accessability.  
+
+Included are Tests that cover a variety of use cases for the program.
 
 ## Prerequisites
 
