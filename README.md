@@ -1,7 +1,6 @@
 # csc511-assignment-4-october-7
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app is build onto assignment 3 (cost-break-down-calculator). Updated the app to be screen reader compatible. Components are now broken up into 3 sperate components. One component takes in input fields such as name, event, and amount spent. Second component displays the events and has an option to remove that event. The last component will give an option to tally up and display all shared expenses. Lastly testers were added. Unit testers for helpers and integration helpers for components. 
 
 ## Prerequisites
 
@@ -14,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone -b dansobolev --single-branch https://github.com/CSC-511/csc511-assignment-4-october-7.git`
 * `cd csc511-assignment-4-october-7`
 * `npm install`
 
