@@ -1,0 +1,16 @@
+<i>Splitwise Info:</i>
+    
+<ul id='people'>
+    {{#each @splitwiseList as |person index|}}
+        <li>
+            {{person.name}} paid ${{person.cost}} for {{person.event}}.
+            <button delete-button aria-label="Remove Person" onClick={{action @clearIndex index}}>-</button>
+        </li>
+    {{/each}}
+</ul>
+
+<p total>Recurring total: ${{getSum @costList}}  </p>
+<p numPpl>{{numPeople @nameList}}</p>
+<p avg>{{averageOwed @nameList @costList}}</p>
+
+<br>
