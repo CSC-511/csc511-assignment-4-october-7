@@ -4,7 +4,7 @@
             {{#each @allInfo  as |person index|}}
         <li>
                {{person.Name}} paid {{person.Cost}} for {{person.Event}}
-               <button  delete-button aria-label="Remove Person" onClick={{fn @clearIndex index}}>-</button>
+               <button  delete-button aria-label="Remove Person" onClick={{action clearIndex index}}>-</button>
         </li>
             {{/each}}  
         </ul>
