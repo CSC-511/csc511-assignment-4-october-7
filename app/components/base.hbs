@@ -1,0 +1,35 @@
+<h2>Daniel Dolan Assignment 3 CSC 511</h2>
+<br>
+<h4> Please Enter Your Info </h4>
+<div id="center">
+<div>
+<table class='names'>
+    <label>Add a name: </label>
+    <input id="name" value={{currentName}} type="string" oninput={{action changeName}}>
+    <label>Add an Event </label>
+    <input id="event" value={{currentEvent}} type="string" oninput={{action changeEvent}}>
+    <label> Add the Cost</label>
+    <input id="cost" value={{currentCost}} type="number" oninput={{action changeCost}}>
+    <button add-button onclick={{action addToAllInfo this.currentName this.currentEvent this.currentCost}}>Submit</button>
+    
+</table>
+</div>
+
+<UserDisplay 
+@allInfo={{this.AllInfo}}
+@clearIndex={{this.clearIndex}}>
+</UserDisplay>
+<br><br><br><br><br><br>
+<UsersTotal 
+@costList={{this.costList}}>
+</UsersTotal>
+
+{{!-- <p>The average price Owed ${{avg costList}}  </p> --}}
+<UsersOwed 
+@allInfo={{this.AllInfo}}
+@peopleList={{this.peopleList}}
+@costList={{this.costList}}>
+</UsersOwed>
+ 
+{{!-- <p>{{owe peopleList costList}}  </p> --}}
+</div>
