@@ -1,0 +1,6 @@
+ <i>FINAL LIST</i>
+
+{{#each @splitwiseList as |person index|}}
+    <p style="color:green;"> {{totalOwed @nameList @costList index}}</p>
+    <p style="color:red;">{{totalOwes @nameList @costList index}}</p>
+{{/each}}

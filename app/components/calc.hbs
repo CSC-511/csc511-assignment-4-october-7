@@ -1,0 +1,45 @@
+{{yield}}
+
+
+{{!-- THIS IS THE MAIN DISPLAY --}}
+
+<h1>CSC 511 - Assignment 4</h1>
+<h1>Cost Breakdown Calculator With Accessibility</h1>
+<h1>Victoria Fischer</h1>
+
+<br>
+
+    <h4>Please enter the names in your party, the events to pay for, and cost per event. </h4>
+        <div>
+            <table class='names'>
+                <label>Name: </label>
+                <input aria-label="Name Field" id="name" value={{currentName}} type="string" oninput={{action changeName}}>
+                <label>Event: </label>
+                <input aria-label="Event Field" id="event" value={{currentEvent}} type="string" oninput={{action changeEvent}}>
+                <label>Cost: </label>
+                <input aria-label="Cost Field" id="cost" value={{currentCost}} type="number" oninput={{action changeCost}}>
+                <button add-button aria-label="Add Person" onclick={{action addToSplitwiseList this.currentName this.currentEvent this.currentCost}}>Add</button>
+
+            </table>
+        </div>
+
+<br><br>
+
+
+<SplitwiseInfo
+@splitwiseList={{this.SplitwiseList}}
+@nameList={{this.nameList}}
+@eventList={{this.eventList}}
+@costList={{this.costList}}
+@clearIndex={{this.clearIndex}}>
+</SplitwiseInfo>
+
+<FinalList
+@splitwiseList={{this.SplitwiseList}} 
+@nameList={{this.nameList}}
+@eventList={{this.eventList}}
+@costList={{this.costList}}>
+</FinalList>
+
+
+
