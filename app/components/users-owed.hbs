@@ -1,0 +1,7 @@
+{{!-- {{yield}} --}}
+<p avg>The average price Owed ${{avg @costList}}  </p>
+<i>Who owes what is presented below</i>
+{{#each @allInfo as |person index|}}
+                <p style="color:green;"> {{owed @peopleList @costList index}}</p>
+                <p style="color:red;">   {{owe @peopleList @costList index}}</p>
+            {{/each}}  
