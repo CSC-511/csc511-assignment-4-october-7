@@ -1,6 +1,6 @@
 import { helper } from '@ember/component/helper';
 
-export default helper(function costBreakdownCalc(params) {
+export function costBreakdownCalc(params) {
   let [rows, arrParticipants]=params;
   var totalExpense = 0;
   var numOfParticipants = arrParticipants.length;
@@ -66,5 +66,7 @@ export default helper(function costBreakdownCalc(params) {
    console.log(sortedResult);
 
   return sortedResult;
-});
+};
+
+export default helper(costBreakdownCalc);
 

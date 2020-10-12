@@ -33,28 +33,29 @@ export default class BaseAppComponent extends Component {
         this.currentExpense="";
     }
 
-    removeRowFromEventsTable(index){
+    removeRowFromEventsTable(){
         //console.log(this.rows[index]);
+        var index = document.getElementById("btnRemoveEvent").value;
         this.rows.removeAt(index);
     }
 
     changeParticipant(event){
-        console.log(event);
+        //console.log(event);
         this.currentParticipant = event.target.value;
     }
 
     changeSpendingEvent(event){
-        console.log(event);
+        //console.log(event);
         this.currentSpendingEvent = event.target.value;
     }
 
     changeCurrentPaidBy(event){
-        console.log(event);
+        //console.log(event);
         this.currentPaidBy = event.target.value;
     }
 
     changeCurrentExpense(event){
-        console.log(event);
+        //console.log(event);
         this.currentExpense = event.target.value;
     }
 
