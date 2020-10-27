@@ -1,0 +1,25 @@
+<div>
+      <ul>
+        
+        {{#each this.numOfPeople key ="@index" as |attende index|}}
+        <li tabindex=2 aria-label="{{attende.name}}">
+        <div class="names">
+        {{attende.name}}
+        <button class = 'remove' aria-label="Delete {{attende.name}} at index" 
+        onclick={{action clearArrayAt index}} tabindex=2>remove</button>
+        <input 
+        id="bill" 
+        placeholder="$0" 
+        value={{curr}} 
+        type="number"
+        oninput={{action changeAmount index}}
+        aria-label="Add Attende {{attende.name}}"
+        tabindex=2
+        >
+
+        </div>
+        </li>
+        {{/each}}
+       
+       </ul>
+</div>

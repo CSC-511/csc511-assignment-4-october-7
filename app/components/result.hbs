@@ -1,0 +1,26 @@
+<div>
+<ul>
+        <div class="names">
+        {{#each this.numOfPeople key ="@index" as |attende index|}}
+        <li tabindex=3 aria-label="{{attende.name}} The Result">
+        {{attende.name}} &nbsp; ${{attende.bill}} 
+
+        {{#if (gte attende.bill (get-total numOfPeople))}}
+
+         <p class="green">{{attende.name}} is getting ${{split attende.bill (get-total numOfPeople)}} from {{person-owes (get-total numOfPeople) numOfPeople}}  &nbsp;</p>
+        
+        {{else if (eq attende.bill (get-total numOfPeople)) }}
+         
+          <p>{{attende.name}} doesn't owe anybody</p>
+
+        {{else}}
+
+          <p class="red">{{attende.name}} owes ${{split (get-total numOfPeople) attende.bill}} to {{received (get-total numOfPeople) numOfPeople}}</p>
+        
+        {{/if}}
+        </li>
+        {{/each}}
+         </div>
+      </ul>
+      {{yield}}
+</div>

@@ -1,0 +1,21 @@
+<div class="background">
+  <div class="header">Bill Splitter</div>
+
+  <label class="prompt"> Names of the attendies (One at a time)</label>
+  <input 
+        id="name" 
+        value = {{currValue}}
+        type="string" 
+        placeholder="Paul, Mike, etc.."
+        oninput={{action changeName}}
+        aria-label="Add Attende"
+        tabindex=1
+  >
+   <div class="buttonSpc">
+    <button onclick={{action clearArray}} id="reset" tabindex=1>Reset </button>
+     <button onclick={{action addtoPpl}} id="event" tabindex=1> Add Attende </button>
+   </div>
+   <Calculate @numOfPeople = {{numOfPeople}}/>
+   <Result @numOfPeople = {{numOfPeople}}/>
+</div>
+ 
